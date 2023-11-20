@@ -19,7 +19,23 @@ namespace _2___Rappresentare_una_persona_fisica
                 this.nome = nome;
                 registrato = false;
             }
-            public void Registra()
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                dati persona = new dati("21879", "Jacopo", "Riccardi");
+
+                Console.WriteLine("Dati Anagrafici prima della registrazione:");
+                persona.Mostra();
+                Console.WriteLine("Clicca un tasto per confermare la registrazione");
+                Console.ReadLine();
+                persona.Registra();
+
+                Console.WriteLine("\nDati Anagrafici dopo la registrazione:");
+                persona.Mostra();
+            }
+        }
+        public void Registra()
             {
                 registrato = true;
 
@@ -33,21 +49,6 @@ namespace _2___Rappresentare_una_persona_fisica
                 Console.WriteLine("Registrato: {0}", registrato ? "Sì" : "No");
             }
         }
-        internal class Program
-        {
-            static void Main(string[] args)
-            {
-                dati persona = new dati("21323", "Rota", "Alessandro");
-
-                Console.WriteLine("Dati Anagrafici prima della registrazione:");
-                persona.Mostra();
-                Console.WriteLine("Clicca un tasto per confermare la registrazione");
-                Console.ReadLine();
-                persona.Registra();
-
-                Console.WriteLine("\nDati Anagrafici dopo la registrazione:");
-                persona.Mostra();
-            }
-        }
+       
     }
 
