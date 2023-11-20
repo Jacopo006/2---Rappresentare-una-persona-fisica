@@ -22,6 +22,7 @@ namespace _2___Rappresentare_una_persona_fisica
             public void Registra()
             {
                 registrato = true;
+
                 Console.WriteLine("Persona registrata con successo.");
             }
             public void Mostra()
